@@ -1,6 +1,15 @@
 import collections
 from typing import List
 
+"""
+Algorithm used: Tarjan's Algorithm
+
+Tarjan's algorithm is based on depth first search (DFS). The vertices are indexed as they are traversed by DFS procedure. While returning from the recursion of DFS, every vertex V gets assigned a vertex L as a representative. L is a vertex with the least index that can be reach from V. Nodes with the same representative assigned are located in the same strongly connected component.
+
+Complexity: O(|V| + |E|)
+
+"""
+
 
 class Solution:
     def criticalConnections(
