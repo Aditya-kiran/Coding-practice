@@ -46,6 +46,9 @@ class Solution:
                     queue.append((i, j + x))
 
     def dfs(self, grid, i, j):
+        # for row in grid:
+        #     print(row)
+        # print("\n")
         if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != "1":
             return
         grid[i][j] = "#"
@@ -56,11 +59,11 @@ class Solution:
 
 
 grid = [
-    ["1", "1", "0", "1", "0"],
-    ["0", "0", "0", "1", "0"],
+    ["1", "1", "1", "1", "0"],
+    ["1", "1", "1", "1", "0"],
     ["1", "1", "0", "1", "0"],
     ["0", "0", "0", "0", "0"],
-    ["0", "1", "0", "0", "1"],
+    ["0", "0", "0", "0", "1"],
 ]
 obj = Solution()
 print(obj.numIslands(grid))
