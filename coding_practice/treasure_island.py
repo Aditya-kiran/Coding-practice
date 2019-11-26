@@ -30,7 +30,7 @@ class Solution:
         queue = deque()
         seen = {()}
         for i, row in enumerate(grid):
-            for j, col in enumerate(row):
+            for j, _ in enumerate(row):
                 if grid[i][j] == "S":
                     queue.append([i, j, 0])
                     seen.add((i, j))
